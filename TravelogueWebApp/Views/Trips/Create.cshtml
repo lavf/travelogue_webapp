@@ -1,0 +1,73 @@
+﻿@model TravelogueWebApp.Models.Trip
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>&#x2728 Create</h1>
+<br/>
+<h4>Trip</h4>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TripArrivalYear" class="control-label"></label>
+                <input asp-for="TripArrivalYear" class="form-control" />
+                <span asp-validation-for="TripArrivalYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripArrivalMonth" class="control-label"></label>
+                <input asp-for="TripArrivalMonth" class="form-control" />
+                <span asp-validation-for="TripArrivalMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripArrivalDay" class="control-label"></label>
+                <input asp-for="TripArrivalDay" class="form-control" />
+                <span asp-validation-for="TripArrivalDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripDepartureYear" class="control-label"></label>
+                <input asp-for="TripDepartureYear" class="form-control" />
+                <span asp-validation-for="TripDepartureYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripDepartureMonth" class="control-label"></label>
+                <input asp-for="TripDepartureMonth" class="form-control" />
+                <span asp-validation-for="TripDepartureMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripDepartureDay" class="control-label"></label>
+                <input asp-for="TripDepartureDay" class="form-control" />
+                <span asp-validation-for="TripDepartureDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripCountry" class="control-label"></label>
+                <input asp-for="TripCountry" class="form-control" />
+                <span asp-validation-for="TripCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripCity" class="control-label"></label>
+                <input asp-for="TripCity" class="form-control" />
+                <span asp-validation-for="TripCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripTransport" class="control-label"></label>
+                <input asp-for="TripTransport" class="form-control" />
+                <span asp-validation-for="TripTransport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
